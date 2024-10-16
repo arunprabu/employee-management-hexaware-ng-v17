@@ -317,17 +317,126 @@ Building Blocks
 
 Project Structure
 =====
-  src/
-    app/ 
-      header/
-      footer/
-      ...
-      ...
-      ...
-      ...
+  1. Building Block wise Project Structure  [NOT RECOMMENDED]
+        src/
+          app/
+            components/
+            directives/
+            services/
+
+
+  2. Feature wise + Building Block wise Project Structure 
+      src/
+        app/ 
+          home/
+            components/
+            directives/
+            services/
+          concepts/
+          employee-manager/
+          about/
+          contact/
+          shared/
+            components/
+              header/
+              footer/
+            directives/
+              ...
+              ...
+              
+          ...
+          ...
+          ...
+          ...
       
 
 
 
+Components
+====
+  1. Standalone Components 
+      header, footer, menu-list 
 
+  2. App wide Components / Module based components
+
+
+  HTML 
+  CSS 
+  TS 
+
+
+
+=====
+
+Concepts
+----
+  Data Binding 
+    * keeping the data in component ts and displaying it in component html 
+
+    1. Interpolation
+        TS => HTML 
+
+        {{ }}
+
+    2. Property Binding 
+    3. Event Binding 
+    4. Two Way Binding 
+    
+    5. Custom Property Binding 
+    6. Custom Event Binding 
+
+
+
+
+Routing 
+=-=====
+  * to make angular app as SPA
+
+  Step 0: 
+    Identify the Menus and the urls 
+      Home                        / 
+      Concepts                    /concepts
+      Employee Manager            /employee-manager
+      About                       /about 
+      Contact                     /contact
+
+  Step 1: 
+    Setup the urls in menu component html 
+
+  Step 2: 
+    Let's create the components for menus 
+      Home              ng g c home --inline-template --inline-style
+      Concepts          ng g c concepts --inline-style
+      About             ng g c about --inline-template --inline-style
+      Contact           ng g c contact --inline-template --inline-style
+
+  Step 3: 
+    Let's configure the routes in app.routes.ts 
+
+  Step 4: 
+    Check the app. URL will be stable. but the component won't be loaded 
+    Let's fix it in app.component.html 
+    add <router-outlet></router-outlet> in between header and footer 
+
+  Step 5: 
+  ---
+    Check the app. Page will still refresh. Let's fix it.
+
+    in menu list component html -- 
+      replace <a href=""> with <a routerLink="">
+
+
+7 characteristics of SPA
+----
+  1. Page should NOT refresh [DONE]
+  2. URL should be changed (optional).  [DONE]
+  3. Browser history should be maintained w/o page refresh [DONE]
+  4. Retain header and footer without reloading them again and again [DONE]
+  5. Main Section should have contextual updates [DONE]
+  6. Active Menu should be set 
+  7. Page Title should also be changed (optional)
+
+
+Modules
+---
   
