@@ -377,9 +377,15 @@ Concepts
         TS => HTML 
 
         {{ }}
-
+    
     2. Property Binding 
+        TS => HTML 
+        []
+
     3. Event Binding 
+        TS <== HTML 
+        ()
+
     4. Two Way Binding 
     
     5. Custom Property Binding 
@@ -425,6 +431,8 @@ Routing
     in menu list component html -- 
       replace <a href=""> with <a routerLink="">
 
+    Note: if it is standalone component, then import RouterModule under imports section of menu-list.component.ts. Only then routerLink will be recognized
+  
 
 7 characteristics of SPA
 ----
