@@ -303,7 +303,7 @@ Angular
 
 Building Blocks
 ====
-  Components
+  Components 
   Directives
   Services
   Modules
@@ -351,18 +351,12 @@ Project Structure
       
 
 
-
 Components
 ====
   1. Standalone Components 
       header, footer, menu-list 
 
-  2. App wide Components / Module based components
-
-
-  HTML 
-  CSS 
-  TS 
+  2. App wide Components / Feature Module based components
 
 
 
@@ -373,23 +367,43 @@ Concepts
   Data Binding 
     * keeping the data in component ts and displaying it in component html 
 
-    1. Interpolation
+    1. Interpolation [DONE]
         TS => HTML 
 
         {{ }}
     
-    2. Property Binding 
+    2. Property Binding [DONE]
         TS => HTML 
         []
 
-    3. Event Binding 
+    3. Event Binding [DONE]
         TS <== HTML 
         ()
 
-    4. Two Way Binding 
+    4. Two Way Binding [DONE]
+        TS <==> HTML
+        [(ngModel)]
+        Note: implement this in form fields
     
-    5. Custom Property Binding 
-    6. Custom Event Binding 
+    5. Custom Property Binding [DONE]
+    6. Custom Event Binding [DONE]
+
+  REST API Call 
+  LifeCycle hooks 
+  RxJS/Observables 
+
+
+
+Cross Component Communication
+============
+  1. Parent to Child Component Communication [DONE]
+      using Custom Property Binding 
+
+  2. Child to Parent Component Communication [DONE]
+      using Custom Event Binding 
+
+  3. Any to Any Component Communication 
+      Using Services, RxJS, Observables, Subscription
 
 
 
@@ -444,6 +458,25 @@ Routing
   6. Active Menu should be set 
   7. Page Title should also be changed (optional)
 
+
+
+Directives
+=====
+  * special instructions to the DOM
+
+  1. Attribute Directives 
+      * Examples: routerLink, routerLinkActive, routerLinkActiveOptions
+
+  2. Structural Directives 
+      * impact of these directives will be on structural layer (html)
+
+      2.1 *ngIf [DONE]
+      2.2 *ngFor [DONE]
+      2.3 ngSwitch [TODO]
+
+  3. Custom Attribute Directives
+
+  4. Custom Structural Directives [TODO]
 
 Modules
 ---
