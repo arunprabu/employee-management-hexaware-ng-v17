@@ -21,20 +21,15 @@ import { ColorizerDirective } from '../directives/colorizer.directive';
 export class ConceptsComponent {
   // interpolation related variable
   appName = 'Employee Manager App';
-
   // property binding related
   profileName = 'John';
-
   // two way binding
   courseTitle = 'Angular 17';
-
   myAge = 85;
-
   status = {
     message: '',
     reportId: '',
   };
-
   // directives related
   isLoggedIn = false;
   skills = ['html', 'css', 'js', 'ts', 'angular'];

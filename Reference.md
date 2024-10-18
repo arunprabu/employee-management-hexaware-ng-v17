@@ -303,14 +303,19 @@ Angular
 
 Building Blocks
 ====
-  Components 
-  Directives
+  Components [PARTIALLY COMPLETED]
+    html 
+    css
+    ts 
+
+  Directives [DONE]
   Services
   Modules
   Interface
   Pipes
 
-  Guards
+
+  Guards 
   Classes
   Interceptors 
 
@@ -400,8 +405,13 @@ Cross Component Communication
       using Custom Property Binding 
 
   2. Child to Parent Component Communication [DONE]
-      using Custom Event Binding 
+      2.1 using Custom Event Binding with @Output()
+          * child component sending to parent component 
 
+      2.2 using @ViewChild() 
+          * parent component accessing data from child 
+          Refer: https://github.com/arunprabu/employee-mgmt-ng-oct2022/blob/master/src/app/concepts/components/concepts.component.ts
+          
   3. Any to Any Component Communication 
       Using Services, RxJS, Observables, Subscription
 
@@ -474,9 +484,69 @@ Directives
       2.2 *ngFor [DONE]
       2.3 ngSwitch [TODO]
 
-  3. Custom Attribute Directives
+  3. Custom Attribute Directives [DONE]
+      ng g d colorizer
 
   4. Custom Structural Directives [TODO]
+      Learn more from here: https://v17.angular.io/guide/structural-directives#creating-a-structural-directive
+
+
+
+
+Naming Conventions & Casing 
+----
+  Casing Types 
+  --------
+    1. PascalCase 
+        * Recommended for Object Oriented Program's classes 
+        * also Recommended for Interface in TypeScript 
+
+        examples 
+        ---
+          class CarDetails {
+
+          }
+
+          interface Employee {
+
+          }
+
+    2. camelCase 
+        * Recommended for variables, const, functions, methods in JS & TS 
+        * Recommended for id's of html elements 
+        
+        examples 
+        -----
+          var myCar = 'BMW';
+          var isLoggedIn = true;
+          var hasValidToken = true;
+
+          function getCarInfo() {
+            //....
+          }
+    
+    3. kebab-case
+        * Recommended for URLs 
+        * Recommended for file names, folder names, assets in front end projects  
+        * Recommended for css classes 
+        * okay for id's of html elements if your architect says ok
+
+        examples 
+        -----
+          btn-primary
+          slideshow-container 
+          youtube-logo.png 
+
+    4. snake_case 
+        * never ever use this. 
+        * okay for const in JS & TS if architect accepts
+
+        examples
+        ---
+          const MAX_STUDENTS_PER_CLASS = 30;
+
+----------------
+   
 
 Modules
 ---

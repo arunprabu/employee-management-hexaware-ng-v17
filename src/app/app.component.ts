@@ -9,7 +9,11 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 @Component({
   selector: 'app-root', // element selector
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    FooterComponent
+  ],
   templateUrl: './app.component.html', // html  -- must
   styleUrl: './app.component.css', // css -- optional
 })

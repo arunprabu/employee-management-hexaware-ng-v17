@@ -10,7 +10,7 @@ import { MenuListComponent } from '../menu-list/menu-list.component';
 
     <app-menu-list></app-menu-list>
 
-    <p>Copyright {{ copyrightYear }} | Arun</p>
+    <p>Copyright &copy; {{ copyrightYear }} | Arun</p>
   </footer>`,
   styles: ``,
 })
