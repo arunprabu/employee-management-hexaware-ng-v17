@@ -551,3 +551,44 @@ Naming Conventions & Casing
 Modules
 ---
   
+
+
+
+Employee Manager 
+====
+  Components 
+  Services 
+  Interface
+  
+  RxJS/Observables
+  REST API call  
+
+
+-----
+1. List Employees 
+    URL: localhost:4200/employees
+    component: ng g c employees/components/list-employees --inline-style 
+    REST API URL: https://jsonplaceholder.typicode.com/users
+    Http method: GET
+
+2. Add Employee 
+    URL: localhost:4200/employees/add 
+    component: ng g c employees/components/add-employee --inline-style 
+    REST API URL: https://jsonplaceholder.typicode.com/users
+    Http method: POST
+
+3. Employee Details 
+    URL: localhost:4200/employees/1 (or) localhost:4200/employees/3
+    component: ng g c employees/components/employee-details --inline-style 
+    REST API URL: https://jsonplaceholder.typicode.com/users/1
+    Http method: GET
+
+4. Update Employee
+    URL: localhost:4200/employees/1 (or) localhost:4200/employees/3
+    REST API URL: https://jsonplaceholder.typicode.com/users/1
+    Http method: PUT
+
+5. Delete Employee (TODO)
+    REST API URL: https://jsonplaceholder.typicode.com/users/1
+    Http method: DELETE
+
