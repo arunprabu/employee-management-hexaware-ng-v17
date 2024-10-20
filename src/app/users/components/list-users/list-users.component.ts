@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-list-user',
+  selector: 'app-list-users',
   template: `
     <p>
-      list-user works!
+      list-users works!
     </p>
   `,
   styles: ``
 })
-export class ListUserComponent {
+export class ListUsersComponent {
 
 }

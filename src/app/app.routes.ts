@@ -16,4 +16,9 @@ export const routes: Routes = [
   { path: 'employees/1', component: EmployeeDetailsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  {
+    path: 'users',
+    loadChildren: () =>
+      import('./users/users.module').then((m) => m.UsersModule),
+  },
 ];

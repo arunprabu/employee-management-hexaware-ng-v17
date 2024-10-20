@@ -4,9 +4,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-menu-list',
   standalone: true,
-  imports: [
-    RouterModule
-  ],
+  imports: [RouterModule],
   template: `
     <ul class="navbar-nav me-auto mb-2 mb-md-0">
       <li class="nav-item">
@@ -23,6 +21,9 @@ import { RouterModule } from '@angular/router';
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/contact">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/users">Users</a>
       </li>
     </ul>
   `,
