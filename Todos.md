@@ -14,5 +14,6 @@
 14. Learn about custom structural directive
     Refer: https://v17.angular.io/guide/structural-directives#creating-a-structural-directive
 15. Explore ngClass and ngStyle binding
-
+16. Implement phone number validation for Max 10 Digits
+17. Learn about disabling the submit button in case of validation error
 

@@ -309,8 +309,8 @@ Building Blocks
     ts 
 
   Directives [DONE]
-  Services
-  Modules
+  Services 
+  Modules [DONE]
   Interface
   Pipes
 
@@ -392,10 +392,11 @@ Concepts
     
     5. Custom Property Binding [DONE]
     6. Custom Event Binding [DONE]
-
-  REST API Call 
+  Angular Forms 
+  REST API Call [DONE]
   LifeCycle hooks 
   RxJS/Observables 
+
 
 
 
@@ -735,3 +736,57 @@ All the setup is done.
 
 
 ng new my-app --standalone=false   (new project with app module)
+
+
+
+=======
+Angular Forms 
+=============
+  
+  1. Template Driven Forms [NOT RECOMMENDED]
+      * Template Driven Forms are the most commonly used forms in Angular. 
+      * Easiest to learn and use.
+      * will help you implement validations in html only
+        Disadvantages:
+          * Not suitable for complex form validations 
+          * Not suitable for unit testing 
+
+  2. Reactive Forms / Data-driven forms [RECOMMENDED]
+      * Reactive Forms are the recommended way to use forms in Angular.
+      * Easy. 
+      * will help you implement validations via html and ts
+
+        Advantages:
+          * Suitable for complex form validations
+          * Suitable for unit testing
+
+
+  Reactive forms 
+  ====
+    Step 0: 
+      have the html form with the form fields
+
+    Step 1: 
+      have the ts file with form tag equivalent (FromGroup)
+
+    Step 2:   
+      have the ts file with form fields equivalent (FormControl)
+
+    Step 3: 
+      patch up the html form tag with the FormGroup in ts
+      
+    Step 4: 
+      patch up the html form fields with the FormControl in ts
+
+    Step 5: 
+      setup validation in ts
+
+    Step 6: 
+      displaying validation related msg
+      
+    Step 7: 
+      work on submission flow -- ref ts for step 8
+
+
+
+

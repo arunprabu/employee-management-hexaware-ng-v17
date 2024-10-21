@@ -21,12 +21,12 @@
     <h2>Listing Employees</h2>
 
     <!-- TODO: Show the loader / spinner at first -->
-    <div class="col-sm-3 mb-2">
+    <div class="col-sm-3 mb-2" *ngFor="let employee of employees">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">John</h5>
-          <p class="card-text">Phone: 324567890</p>
-          <a routerLink="/employees/1" class="card-link">View Details</a>
+          <h5 class="card-title">{{employee.name}}</h5>
+          <p class="card-text">Phone: {{employee.phone}}</p>
+          <a routerLink="/employees/{{employee.id}}" class="card-link">View Details</a>
         </div>
       </div>
     </div>

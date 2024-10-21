@@ -11,13 +11,19 @@ import { EmployeeDetailsComponent } from './employees/components/employee-detail
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'concepts', component: ConceptsComponent },
-  { path: 'employees', component: ListEmployeesComponent },
-  { path: 'employees/add', component: AddEmployeeComponent },
-  { path: 'employees/1', component: EmployeeDetailsComponent },
+  {
+    path: 'employees',
+    children: [
+      { path: '', component: ListEmployeesComponent },
+      { path: 'add', component: AddEmployeeComponent },
+      { path: ':id', component: EmployeeDetailsComponent }, // id is url param
+    ],
+  },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   {
     path: 'users',
+    // lazy loading a module
     loadChildren: () =>
       import('./users/users.module').then((m) => m.UsersModule),
   },
