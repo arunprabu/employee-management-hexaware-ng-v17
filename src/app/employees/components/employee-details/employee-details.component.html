@@ -43,9 +43,9 @@
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="modal-body">
+              <div class="modal-body" *ngIf="duplicateEmployee">
                 <!-- if you want html validation use ngNativeValidate in form tag -->
-                <form>
+                <form (ngSubmit)="handleSubmit()" ngNativeValidate>
                   <div class="form-group row mb-3">
                     <label for="nameInput" class="col-sm-2 col-form-label"
                       >Name</label
@@ -57,6 +57,7 @@
                         class="form-control"
                         placeholder="Enter name"
                         name="nameInput"
+                        [(ngModel)]="duplicateEmployee.name" 
                         required
                       />
                       <div class="invalid-feedback">Name is Required</div>
@@ -73,6 +74,7 @@
                         class="form-control"
                         placeholder="Enter Phone"
                         name="phoneInput"
+                        [(ngModel)]="duplicateEmployee.phone" 
                         required
                       />
                       <div class="invalid-feedback">Phone is Required</div>
@@ -89,6 +91,7 @@
                         class="form-control"
                         placeholder="Enter Email"
                         name="emailInput"
+                        [(ngModel)]="duplicateEmployee.email" 
                         required
                       />
                       <div class="invalid-feedback">
@@ -98,7 +101,7 @@
                     </div>
                   </div>
 
-                  <div class="alert alert-success">
+                  <div class="alert alert-success" *ngIf="isUpdated">
                     Updated successfully!
                   </div>
 

@@ -64,4 +64,17 @@ export class EmployeesService {
         })
       );
   }
+
+  updateEmployee(employee: any) {
+    console.log(employee);
+    return this.http
+      .put('https://jsonplaceholder.typicode.com/users/' + employee.id, employee)
+      .pipe(
+        map((res: any) => {
+          console.log('Response Received from REST API');
+          console.log(res);
+          return res;
+        })
+      );
+  }
 }

@@ -395,6 +395,8 @@ Concepts
   Angular Forms 
   REST API Call [DONE]
   LifeCycle hooks 
+    ngOnInit() [DONE]
+    ngOnDestroy() [TODO]
   RxJS/Observables 
 
 
@@ -566,19 +568,19 @@ Employee Manager
 
 
 -----
-1. List Employees 
+1. List Employees [DONE]
     URL: localhost:4200/employees
     component: ng g c employees/components/list-employees --inline-style 
     REST API URL: https://jsonplaceholder.typicode.com/users
     Http method: GET
 
-2. Add Employee 
+2. Add Employee  [DONE]
     URL: localhost:4200/employees/add 
     component: ng g c employees/components/add-employee --inline-style 
     REST API URL: https://jsonplaceholder.typicode.com/users
     Http method: POST
 
-3. Employee Details 
+3. Employee Details [DONE]
     URL: localhost:4200/employees/1 (or) localhost:4200/employees/3
     component: ng g c employees/components/employee-details --inline-style 
     REST API URL: https://jsonplaceholder.typicode.com/users/1
@@ -623,19 +625,17 @@ Step 3:
 
 Then, include the above 2 components in users.module.ts
 
- 
-
     import { NgModule } from '@angular/core';
     import { UsersRoutingModule } from './users-routing.module';
     import { AddUserComponent } from './components/add-user/add-user.component';
     import { ListUsersComponent } from './components/list-users/list-users.component';
     
     @NgModule({
-    declarations: [
-	    AddUserComponent, // REFER here
-	    ListUsersComponent, // REFER here
-    ],
-    imports: [UsersRoutingModule], // Load the routing module here   
+      declarations: [
+        AddUserComponent, // REFER here
+        ListUsersComponent, // REFER here
+      ],
+      imports: [UsersRoutingModule], // Load the routing module here   
     })
  
     export class UsersModule {}
@@ -651,10 +651,7 @@ go to users-routing.module.ts
   
 
 Have the following
-
-/
-
-    / user/users-routing.module.ts
+    // user/users-routing.module.ts
     
     import { NgModule } from '@angular/core';
     
@@ -790,3 +787,12 @@ Angular Forms
 
 
 
+Agenda
+---
+  1. Template Driven form in update employee 
+  2. RxJS/Observables
+  3. Any to Any Component Communication (1.5 to 2 hours) 
+  4. Pipes 
+  5. Build and Deployment 
+
+-----
