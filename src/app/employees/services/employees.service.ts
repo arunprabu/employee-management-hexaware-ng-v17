@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, pipe } from 'rxjs';
+import { map } from 'rxjs';
 
 // because of this Injectable decorator, we can dep inject this service in any component
 @Injectable({
@@ -41,13 +41,16 @@ export class EmployeesService {
     // 2.1 what's the rest api url? https://jsonplaceholder.typicode.com/users
     // 2.2 what's the http method? GET
     // 2.3 what's the REST API client? HttpClient
-    return this.http.get('https://jsonplaceholder.typicode.com/users').pipe(
-      map((res: any) => {
+    return this.http.get('https://jsonplaceholder.typicode.com/users')
+    .pipe(
+      map((res: any) => { // map is an operator
+        // can enrich, transform, filter, sort, remove the response here
         // 3. get the response from the rest api
         console.log('4. Response Received from REST API');
         console.log(res);
         return res; // 4. send the response to the component
-      })
+      }),
+      // can add more RxJS operators here
     );
   }
 
@@ -68,7 +71,10 @@ export class EmployeesService {
   updateEmployee(employee: any) {
     console.log(employee);
     return this.http
-      .put('https://jsonplaceholder.typicode.com/users/' + employee.id, employee)
+      .put(
+        'https://jsonplaceholder.typicode.com/users/' + employee.id,
+        employee
+      )
       .pipe(
         map((res: any) => {
           console.log('Response Received from REST API');

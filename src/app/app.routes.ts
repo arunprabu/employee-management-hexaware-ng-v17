@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ListEmployeesComponent } from './employees/components/list-employees/list-employees.component';
 import { AddEmployeeComponent } from './employees/components/add-employee/add-employee.component';
 import { EmployeeDetailsComponent } from './employees/components/employee-details/employee-details.component';
+import { ProductsComponent } from './products/components/products.component';
 
 // configure the routes
 export const routes: Routes = [
@@ -19,6 +20,7 @@ export const routes: Routes = [
       { path: ':id', component: EmployeeDetailsComponent }, // id is url param
     ],
   },
+  { path: 'products', component: ProductsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   {

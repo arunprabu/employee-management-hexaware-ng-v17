@@ -37,6 +37,7 @@ export class ListEmployeesComponent implements OnInit {
         // 3. display the response in the UI
         this.employees = res;
       });
+      
     
   }
 

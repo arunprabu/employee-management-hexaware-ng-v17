@@ -789,10 +789,26 @@ Angular Forms
 
 Agenda
 ---
-  1. Template Driven form in update employee 
-  2. RxJS/Observables
-  3. Any to Any Component Communication (1.5 to 2 hours) 
-  4. Pipes 
+  1. Template Driven form in update employee [DONE]
+  2. RxJS/Observables [DONE]
+  3. Any to Any Component Communication [DONE]
+  4. Pipes [DONE]
   5. Build and Deployment 
+      
 
 -----
+
+
+Any to Any component communication [DONE]
+--------
+  1. create the necessary components 
+      we have header 
+      we need products component 
+        ng g c products/components/products --inline-style --inline-template
+
+  2. You need service layer for the data to be shared between components
+      ng g s shared/services/cart-data  
+
+  Then, following the steps from cart-data.service.ts
+
+========
